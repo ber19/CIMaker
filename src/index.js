@@ -15,6 +15,7 @@ let textoFinal = "";
 let lockList = false;
 let parentWin;
 let menu;
+let focusOriginal = false, focusFinal = false;
 
 //Ejecucion de la funcion para crear CodeMirror
 initUI();
@@ -247,8 +248,13 @@ clipboardListener.on("change", () => {
     let clipb = clipboard.readText("clipboard");
     if (flagOriginal && flagFinal) {
         textoOriginal = clipb;
-        original.setValue(textoOriginal);
-        flagClipOrig = true;
+        if(focusFinal){
+            final.setValue(textoOriginal);
+            flagClipFin = true;
+        }else{
+            original.setValue(textoOriginal);
+            flagClipOrig = true;
+        }
     }
     else if (!flagOriginal && flagFinal) {
         textoFinal = clipb;
@@ -287,4 +293,12 @@ final.on("change", () => {
     if (original.getValue().length != 0) {
         document.getElementById("continuar").style.visibility = "visible";
     }
+})
+original.on("focus", ()=>{
+    focusFinal = false;
+    focusOriginal = true;
+})
+final.on("focus", ()=>{
+    focusOriginal = false;
+    focusFinal = true;
 })
