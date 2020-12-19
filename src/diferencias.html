@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencias</title>
+    <!--------- CSS --------->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- main.css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="./CodeMirror/lib/codemirror.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="margin: 0px 3em 0px 5em; padding: 0px;">Diferencias:</div>
+        </div>
+        <div class="row">
+            <div class="col-md-auto" id="controles">
+                <button class="btn btn-primary" id="empaquetar" title="Empaquetar">
+                    <img src="./css/icons/box-seam.svg">
+                </button>
+            </div>
+            <div class="col" style="width: 70% !important;">
+                <textarea id="difs" rows="15" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--------- JavaScript --------->
+    <!-- CodeMirror -->
+    <script src="./CodeMirror/lib/codemirror.js"></script>
+    <script src="./CodeMirror/diff_mode/diff.js"></script>
+    <!-- Funcionamiento -->
+    <script src="./diferencias.js"></script>
+
+</body>
+
+</html>

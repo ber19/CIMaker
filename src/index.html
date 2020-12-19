@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIMaker</title>
+  <!--------- CSS --------->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="./CodeMirror/lib/codemirror.css">
+  <link rel="stylesheet" href="./CodeMirror/addon/merge/merge.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col" style="margin: 0px 3em 0px 5em; padding: 0px;">Original:</div>
+      <div class="col" style="padding: 0px;">Final:</div>
+    </div>
+    <div class="row">
+      <div class="col-md-auto" id="controles">
+        <button class="btn btn-warning" id="limpiar" title="Limpiar todo">
+          <img src="./css/icons/trash2-fill.svg">
+        </button>
+        <button class="btn btn-success" id="continuar" title="Continuar" style="visibility: hidden;">
+          <img src="./css/icons/file-diff-fill.svg">
+        </button>
+        <button class="btn btn-outline-primary" id="file1" title="Seleccionar archivo original">
+          <img src="./css/icons/file-earmark-text.svg">
+        </button>
+        <button class="btn btn-outline-primary" id="file2" title="Seleccionar archivo final">
+          <img src="./css/icons/file-earmark-text.svg">
+        </button>
+      </div>
+      <div class="col" id="principal">
+        <div id="miCM"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--------- JavaScript --------->
+  <!-- CodeMirror -->
+  <script src="./CodeMirror/diff_match_patch.js"></script>
+  <script src="./CodeMirror/lib/codemirror.js"></script>
+  <script src="./CodeMirror/addon/merge/merge.js"></script>
+  <!-- Funcionamiento -->
+  <script src="./index.js"></script>
+</body>
+
+</html>

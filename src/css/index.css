@@ -1,0 +1,51 @@
+@font-face{
+    font-family: "JetBrains-Mono";
+    src: url("./fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+*{
+    box-sizing: border-box;
+    font-family: "JetBrains-Mono";
+}
+.CodeMirror{
+    height: auto;
+    border: 1px solid black;
+}
+.row{
+    flex-wrap: nowrap;
+}
+#controles{
+    flex-basis: 2.5em;
+    padding: 0px;
+    margin-left: 8px;
+    text-align: center;
+}
+#principal{
+    padding: 0px;      
+    margin: 0em 0.7em 0em 0.08em ;
+    width: 70% !important;
+    height: 80%;
+}
+#limpiar{
+    padding: 7px;
+    height: 7em;
+}
+#continuar{
+    padding: 7px;
+    height: 8em;
+    margin-top: 0.2em;
+}
+#file1{
+    padding: 7px;
+    height: 6em;
+    margin-top: 2em;
+}
+#file2{
+    padding: 7px;
+    height: 6em;
+    margin-top: 0.2em;
+}
+#empaquetar{
+    margin-top: 5em;
+    padding: 7px;
+    height: 12em;
+}
