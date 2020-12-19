@@ -191,11 +191,12 @@ window.onload = function () {
         document.getElementById("continuar").style.visibility = "hidden";
     }
     let mainH1 = function(){
-        shell.openExternal("https://github.com/")
+        shell.openExternal("https://github.com/ber19/CIMaker.git")
     }
     let versiones = `Hecho con tecnologias:\n\n`+`nodejs: ${process.versions.node}\n`+
     `Electron: ${process.versions.electron}\n`+
-        `CodeMirror: 5.58.3\n\n` +`Muchas gracias!!!     2020 Bernardo Flores\n`
+        `CodeMirror: 5.58.3\n` +`icono: https://creativemarket.com/eucalyp\n\n`+
+        `Muchas gracias!!!     2020 Bernardo Flores`
     let mainH2 = function(){
         dialog.showMessageBox(parentWin, {
             type: "info",
