@@ -63,6 +63,8 @@ window.onload = function () {
         flagFinal = true;
         flagClipOrig = false;
         flagClipFin = false;
+        textoOriginal = "";
+        textoFinal = "";
         document.getElementById("file1").style.visibility = "visible";
         document.getElementById("file2").style.visibility = "visible";
         document.getElementById("continuar").style.visibility = "hidden";
@@ -186,6 +188,8 @@ window.onload = function () {
         flagFinal = true;
         flagClipOrig = false;
         flagClipFin = false;
+        textoOriginal = "";
+        textoFinal = "";
         document.getElementById("file1").style.visibility = "visible";
         document.getElementById("file2").style.visibility = "visible";
         document.getElementById("continuar").style.visibility = "hidden";
@@ -238,7 +242,7 @@ window.onload = function () {
 
 
 /********* CLIPBOARD *********/
-//El clipboard tiene un cambio
+//Se escuchan cambios en el clipboard
 clipboardListener.on("change", () => {
     let clipb = clipboard.readText("clipboard");
     if (flagOriginal && flagFinal) {
