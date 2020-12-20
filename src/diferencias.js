@@ -65,7 +65,7 @@ window.onload = function () {
                     message: "El archivo comprimido se ha guardado"
                 });
                 if (saved == 0) {
-                    ipcRenderer.send("regresar");
+                    ipcRenderer.send("finalizado");
                 }
             })
     })

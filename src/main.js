@@ -68,5 +68,9 @@ ipcMain.on("continuar", (e, arg) => {
   difWindow.webContents.on('did-finish-load', () => {
     //Se envia al proceso renderer
     difWindow.webContents.send('textoDiffs', arg, winDifId)
+
+    ipcMain.on("finalizado", ()=>{
+      difWindow.close();
+    })
   })
 })
