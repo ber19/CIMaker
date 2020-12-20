@@ -113,13 +113,13 @@ let mainMenu = (ventana, packMenu) => {
                     }
                 }
             ]
-        }//,
-        // {
-        //     label: "Dev",
-        //     submenu: [
-        //         { role: "toggledevtools"}
-        //     ],
-        // }
+        },
+        {
+            label: "Dev",
+            submenu: [
+                { role: "toggledevtools"}
+            ],
+        }
     ];
 };
 
@@ -189,13 +189,13 @@ let diffMenu = (ventana, packMenu) =>{
                     }
                 }
             ]
-        }//,
-        // {
-        //     label: "Dev",
-        //     submenu: [
-        //         { role: "toggledevtools" }
-        //     ]
-        // }
+        },
+        {
+            label: "Dev",
+            submenu: [
+                { role: "toggledevtools" }
+            ]
+        }
     ]
 }
 

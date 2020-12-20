@@ -247,11 +247,12 @@ window.onload = function () {
 clipboardListener.on("change", () => {
     let clipb = clipboard.readText("clipboard");
     if (flagOriginal && flagFinal) {
-        textoOriginal = clipb;
         if(focusFinal){
-            final.setValue(textoOriginal);
+            textoFinal = clipb;
+            final.setValue(textoFinal);
             flagClipFin = true;
         }else{
+            textoOriginal = clipb;
             original.setValue(textoOriginal);
             flagClipOrig = true;
         }
