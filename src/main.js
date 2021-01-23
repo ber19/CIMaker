@@ -70,7 +70,7 @@ ipcMain.on("continuar", (e, arg) => {
     difWindow.webContents.send('textoDiffs', arg, winDifId)
 
     ipcMain.on("finalizado", ()=>{
-      difWindow.close();
+      difWindow.destroy();
     })
   })
 })
